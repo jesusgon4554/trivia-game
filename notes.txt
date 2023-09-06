@@ -1,0 +1,126 @@
+Pages
+*Home (LOGO Create Game, Join Lobby, Discord)
+  *Create Game*               *Join Lobby*
+  Game Settings             Enter Access Code
+   Access Code                        
+ Awaiting Players
+
+*IN THE Game
+Instructions: Answer as many trivia questions you can as fast you can.
+person with the most points when the time runs out win.
+
+
+Website Functionality
+*Create and Join Lobbies
+*Passcode Access to Lobby
+*2-6 Players Per lobby
+*Connect an API with Trivia Data
+
+Game Settings
+*Username
+*Game Genre (Movies, Games, Music, Literature, API BASED)
+*Time per Question/Game
+*Number of Questions
+*Host Privlages(kick people, Change settings, Set game params,)
+*Score (100 points per write answer before certain amount of time…)
+
+Game Modes
+*Classic
+*Aggressive (Less time to answer)
+*Answers disappear
+
+
+
+CODE********
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <title>TriviaSmash</title>
+</head>
+
+<body>
+  <div id="banner">
+    <p>Answer as many trivia questions you can as fast you can.
+    person with the most points when the time runs out win.
+    </p>
+  </div>
+  <h1 id="logo">TRIVIA<span id="name">SMASH<span></h1>
+  <div id="buttonContainer">
+  <button id="gameButton1">Create Game</button>
+  <button id="gameButton2">Join Lobby</button>
+  </div>
+    
+  <h3 id="disc"><a>Discord<a><h3>
+</body>
+
+</html>
+
+CSS*****
+body {
+  background-color:#78E3FD;
+}
+#banner{
+  font-family: 'Anton', sans-serif;
+  position:absolute;
+  padding-top:10px;
+  left:0;
+  right:0;
+  top:0;
+  height:60px;
+  text-align:center;
+  background-color:white;
+
+}
+
+#logo{
+ font-family: 'Anton', sans-serif;
+ font-size:100px; 
+ text-align:center;
+ margin-top:180px
+}
+#name{
+  color:#EEF8FF;
+}
+
+#buttonContainer{
+  display:flex;
+  justify-content:space-between;
+}
+#gameButton1{
+  display:inline;
+  margin:0 auto;
+  margin-right:50px;
+  border:none;
+  height:100px;
+  width: 250px;
+  border-radius:15px;
+  background-color:#7D53DE;
+  font-size:24px;
+}
+#gameButton2{
+  display:inline;
+  margin:0 auto;
+  margin-left:  50px;
+  border:none;
+  height:100px;
+  width: 250px;
+  border-radius:15px;
+  background-color:#7D53DE;
+  font-size:26px;
+  color:white;
+}
+
+#disc{
+  text-align:center;
+  margin-top:70px;
+}

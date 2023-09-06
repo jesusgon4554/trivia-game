@@ -1,0 +1,17 @@
+*{
+    display:flex;
+    justify-content: space-between;
+}
+button{
+    margin:0 auto;
+    border:none;
+    height:100px;
+    width: 250px;
+    border-radius:15px;
+    background-color:#7D53DE;
+    font-size:24px;    
+}
+
+h3{
+    color:white;
+}

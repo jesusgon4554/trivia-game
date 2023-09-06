@@ -1,0 +1,20 @@
+body {
+    background-color:#78E3FD;
+}
+
+#logo{
+    font-family: 'Anton', sans-serif;
+    font-size:100px; 
+    text-align:center;
+    margin-top:180px
+}
+
+#name{
+     color:#EEF8FF;
+}
+
+#disc{
+    text-align:center;
+    margin-top:70px;
+}
+   

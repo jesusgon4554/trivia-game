@@ -1,0 +1,41 @@
+#host{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#pageHeader{
+    font-size: 48px;
+}
+#gameCode{
+    margin-top: -30px;
+    font-size: 56px;
+    text-align: center;
+}
+#playerCardContainer{
+    width: 80%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#createGameSettings{
+    height:400px;
+    width: 80%;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+
+#startGameBtn{
+    margin-top: 25px;
+    border:none;
+    height:100px;
+    width: 250px;
+    border-radius:15px;
+    background-color:rgb(7, 208, 57);
+    font-size:24px;
+}
+
+#startGameBtn:hover{
+    cursor: pointer;
+    background-color: rgb(8, 169, 48);
+  }
