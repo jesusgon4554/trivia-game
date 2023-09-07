@@ -1,12 +1,18 @@
 body {
-    background-color:#78E3FD;
+    background-color:#69c9e1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 #logo{
     font-family: 'Anton', sans-serif;
     font-size:100px; 
-    text-align:center;
-    margin-top:180px
+    margin:0;
+    text-align: center;
 }
 
 #name{

@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#joinLobby{
+    font-family: 'Anton', sans-serif;
+    font-size: 64px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#codeContainer{
+    margin:0;
+    text-align: center;
+}
+
+#gameCode{
+    text-align: center;
+    height:100px;
+    width: 450px;
+    font-size:64px;
+    border-radius: 10px;
+}
+
+::placeholder{
+    font-size: 32px;
+    margin-bottom:15px;
+}
+#enterGameBtn{
+    background-color: #FFFD82;
+    font-size: 22px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 10px;
+    height: 70px;
+    width: 210px;
+}
