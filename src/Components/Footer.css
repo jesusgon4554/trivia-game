@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #E4D9FF;
+    text-align: center;  
+    padding: 20px 0;  
+    border-top: 2px solid #fff;
+}
+
+h1{
+    text-align: center;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Join.css";
-
+import Footer from "../Components/Footer";
 //Get Code from user and verify
 //Get Username from User
 //dropdown for colors
@@ -22,6 +22,7 @@ function Join() {
           Enter Game
         </button>
       </div>
+      <Footer />
     </main>
   );
 }

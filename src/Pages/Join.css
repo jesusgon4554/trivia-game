@@ -13,11 +13,11 @@ body {
     padding-bottom: 20px;
     text-align: center;
 }
-/* 
-/* #codeContainer{
+
+#codeContainer{
     margin:auto;
     text-align: center;
-} */ */
+}
 
 #gameCode{
     text-align: center;
