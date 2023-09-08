@@ -10,13 +10,15 @@ function CategoryOption({ categoryName, categoryId, setUserCategory }) {
     <button
       className="categoryOptionBtn"
       onClick={() => {
-        setUserCategory(categoryId);
+        setUserCategory((prevState) => ({
+          ...prevState,
+          categoryName: categoryName,
+          categoryId: categoryId,
+        }));
       }}
       value={categoryId}
     >
-      <h3>
-        {categoryName} {categoryId}
-      </h3>
+      <h3>{categoryName}</h3>
     </button>
   );
 }

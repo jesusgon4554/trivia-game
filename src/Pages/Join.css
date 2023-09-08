@@ -19,7 +19,22 @@ body {
     text-align: center;
 }
 
-#gameCode{
+#inputConatainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+#gameCodeInput{
+    text-align: center;
+    height:100px;
+    width: 450px;
+    font-size:64px;
+    border-radius: 10px;
+    margin:auto;
+    margin-bottom: 20px;
+}
+
+#usernameInput{
     text-align: center;
     height:100px;
     width: 450px;

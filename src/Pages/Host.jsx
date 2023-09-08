@@ -18,9 +18,22 @@ import CategoryOption from "../Components/CategoryOption";
 
 function Host() {
   const [triviaCategories, setTriviaCategories] = useState([]);
-  const [userCategory, setUserCategory] = useState("");
+  const [userCategory, setUserCategory] = useState({
+    categoryName: "",
+    categoryId: null,
+  });
   // const [displayUserCategory, setDisplayUserCategory] = useState();
-  const [gameParams, setGameParams] = useState({});
+  const [gameParams, setGameParams] = useState({
+    param1: "",
+    param2: "",
+    param3: "",
+    param4: "",
+    param5: "",
+    param6: "",
+    param7: "",
+    param8: "",
+  });
+  // this state will be initialized with the return from a call to backend which will provide a randomly generated lobby code
   const [gameCode, setGameCode] = useState(gameCodeVal());
 
   useEffect(() => {
@@ -42,9 +55,10 @@ function Host() {
         }
 
         const data = await response.json();
-        const dataArr = data.trivia_categories;
-        console.log(dataArr);
-        // console.log(dataArr.sort());
+        const dataArr = data.trivia_categories.slice().sort((a, b) => {
+          return a.name.localeCompare(b.name);
+        });
+
         setTriviaCategories(dataArr);
       } catch (error) {
         console.error(error);
@@ -81,6 +95,7 @@ function Host() {
           categoryName={cat.name}
           categoryId={cat.id}
           setUserCategory={setUserCategory}
+          userCategory={userCategory}
         />
       ))
     ) : (
@@ -97,8 +112,10 @@ function Host() {
           Click here for New Code
         </p>
         <div id="playerCardContainer">
-          <div id="gameCode">
-            <p>Lobby Code: {gameCode}</p>
+          <div id="createGameCode">
+            <p>
+              Lobby Code: <span id="loadedCode">{gameCode}</span>
+            </p>
           </div>
 
           {/* titles/colors will be grabbed from backend */}
@@ -126,14 +143,17 @@ function Host() {
           </div>
           <div id="gameCategoriesContainer">
             <h3>Categories</h3>
-            <p> {userCategory} </p>
+            <p>
+              {" "}
+              {userCategory.categoryName} {userCategory.categoryId}{" "}
+            </p>
             <div>{renderCategoryBtns()}</div>
           </div>
         </div>
 
         <button id="startGameBtn">Start Game</button>
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </main>
   );
 }

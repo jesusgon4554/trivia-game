@@ -4,9 +4,9 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <footer>
+    <footer id="foot">
       <Link to="/">
-        <p id="foot">
+        <p>
           TRIVIA<span id="name">SMASH</span>
         </p>
       </Link>

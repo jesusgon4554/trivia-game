@@ -1,4 +1,3 @@
-
 #host{
     display: flex;
     flex-direction: column;
@@ -8,10 +7,16 @@
 #codeGenBtn{
     margin-bottom: 5px;
 }
-#gameCode{
+
+#loadedCode{
+    color:#ecf1f4;
+}
+
+#createGameCode{
     font-family: 'Anton', sans-serif;
     font-size: 28px;
     margin:auto;
+    text-align: center;
 } 
 
 #playerCardContainer{
