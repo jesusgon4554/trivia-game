@@ -13,11 +13,11 @@ body {
     padding-bottom: 20px;
     text-align: center;
 }
-
-#codeContainer{
-    margin:0;
+/* 
+/* #codeContainer{
+    margin:auto;
     text-align: center;
-}
+} */ */
 
 #gameCode{
     text-align: center;
@@ -25,11 +25,12 @@ body {
     width: 450px;
     font-size:64px;
     border-radius: 10px;
+    margin:auto;
+    margin-bottom: 20px;
 }
 
 ::placeholder{
     font-size: 32px;
-    margin-bottom:15px;
 }
 #enterGameBtn{
     background-color: #FFFD82;
