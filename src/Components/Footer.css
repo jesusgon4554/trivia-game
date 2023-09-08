@@ -1,19 +1,15 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-
 footer{
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #E4D9FF;
+    background-color: #5a988d;
     text-align: center;  
-    padding: 20px 0;  
-    border-top: 2px solid #fff;
 }
 
-h1{
+
+#foot{
+    font-family: 'Anton', sans-serif;
     text-align: center;
+    font-size: 18px;
 }

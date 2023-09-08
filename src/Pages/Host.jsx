@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./Host.css";
 
 import PlayerCard from "../Components/PlayerCard";
-import Thing from "../Components/Thing";
+import Footer from "../Components/Footer.jsx";
+import CategoryOption from "../Components/CategoryOption";
+
 // import CategorySelect from "../Components/CategorySelect.jsx";
 
 //category Select
@@ -16,7 +18,8 @@ import Thing from "../Components/Thing";
 
 function Host() {
   const [triviaCategories, setTriviaCategories] = useState([]);
-  const [userCategory, setUserCategory] = useState();
+  const [userCategory, setUserCategory] = useState("");
+  // const [displayUserCategory, setDisplayUserCategory] = useState();
   const [gameParams, setGameParams] = useState({});
   const [gameCode, setGameCode] = useState(gameCodeVal());
 
@@ -63,24 +66,48 @@ function Host() {
     return passcode;
   }
 
+  // function getCatOptionBtns() {
+  //   const categoryOptionBtnArr =
+  //     document.querySelectorAll(".categoryOptionBtn");
+  //   console.log(categoryOptionBtnArr);
+  //   return categoryOptionBtnArr;
+  // }
+
+  function renderCategoryBtns() {
+    return triviaCategories.length > 0 ? (
+      triviaCategories.map((cat) => (
+        <CategoryOption
+          key={cat.id}
+          categoryName={cat.name}
+          categoryId={cat.id}
+          setUserCategory={setUserCategory}
+        />
+      ))
+    ) : (
+      <p>Loading Categories...</p>
+    );
+  }
+
   return (
     <main>
-      <h1 id="gameCode">Lobby Code {gameCode}</h1>
-
       <div id="host">
-        <button onClick={() => setGameCode(gameCodeVal())}>
-          New Game Code
-        </button>
         {/* H1 GAME CODE  generate a single use code*/}
         {/* <button onClick={getTrivia}>GET TRIVIA</button> */}
-
+        <p id="codeGenBtn" onClick={() => setGameCode(gameCodeVal())}>
+          Click here for New Code
+        </p>
         <div id="playerCardContainer">
+          <div id="gameCode">
+            <p>Lobby Code: {gameCode}</p>
+          </div>
+
           {/* titles/colors will be grabbed from backend */}
           <PlayerCard id="username" username="Player 1" color="coral" />
           <PlayerCard id="username2" username="Player 2" />
           <PlayerCard id="username3" username="Player 3" />
           <PlayerCard id="username4" username="Player 4" />
         </div>
+
         <div id="createGameSettings">
           {/* <button className="gamemodeBtn">Classic</button> */}
           {/* <button className="gamemodeBtn">Fast Mode</button> */}
@@ -100,25 +127,13 @@ function Host() {
           <div id="gameCategoriesContainer">
             <h3>Categories</h3>
             <p> {userCategory} </p>
-            <div>
-              {triviaCategories.length > 0 ? (
-                triviaCategories.map((cat) => (
-                  <Thing
-                    key={cat.id}
-                    categoryName={cat.name}
-                    categoryId={cat.id}
-                    setUserCategory={setUserCategory}
-                  />
-                ))
-              ) : (
-                <p>Loading Categories...</p>
-              )}
-            </div>
+            <div>{renderCategoryBtns()}</div>
           </div>
         </div>
 
         <button id="startGameBtn">Start Game</button>
       </div>
+      {/* <Footer /> */}
     </main>
   );
 }

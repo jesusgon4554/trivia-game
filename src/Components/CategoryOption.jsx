@@ -3,9 +3,12 @@ import "./Button.css";
 //map category data from API into buttons to render onto screen
 //with category being passed into CategoryName.
 
-function Thing({ categoryName, categoryId, setUserCategory }) {
+function CategoryOption({ categoryName, categoryId, setUserCategory }) {
+  function categoryBtnClicked() {}
+
   return (
     <button
+      className="categoryOptionBtn"
       onClick={() => {
         setUserCategory(categoryId);
       }}
@@ -18,4 +21,4 @@ function Thing({ categoryName, categoryId, setUserCategory }) {
   );
 }
 
-export default Thing;
+export default CategoryOption;

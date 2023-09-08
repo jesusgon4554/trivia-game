@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-family: 'Anton', sans-serif;
+    text-align: center;
+    font-size: 48px;
+}

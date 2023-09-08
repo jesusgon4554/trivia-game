@@ -1,12 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 
 function Footer() {
   return (
     <footer>
-      <h1>
-        TRIVIA<span id="name">SMASH</span>
-      </h1>
+      <Link to="/">
+        <p id="foot">
+          TRIVIA<span id="name">SMASH</span>
+        </p>
+      </Link>
     </footer>
   );
 }
