@@ -10,6 +10,9 @@ import "./Home.css";
 function Home() {
   const navigate = useNavigate();
 
+  const apiKey = process.env.TRIVIA_QUIZ_QUESTIONS_APIKEY;
+  console.log(apiKey);
+
   function handleCreateGame() {
     navigate("/host");
   }
