@@ -46,3 +46,20 @@
     background-color:#9c72fd;
     font-size:24px;
   }
+
+  .categoryOptionBtn{
+    display:inline;
+    margin:0 auto;
+    margin-right:50px;
+    margin-top:10px;
+    border:none;
+    height:60px;
+    width: 200px;
+    border-radius:15px;
+    background-color:#b395fa;
+
+  }
+
+  .categoryOptionBtn:hover{
+    background-color:#95e1fa;
+  }

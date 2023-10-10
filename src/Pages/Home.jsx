@@ -19,6 +19,7 @@ function Home() {
   function handleJoinLobby() {
     navigate("/join");
   }
+ 
 
   return (
     <main>

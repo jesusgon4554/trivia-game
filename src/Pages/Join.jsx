@@ -2,7 +2,11 @@ import React from "react";
 import "./Join.css";
 import Footer from "../Components/Footer";
 import ColorSelector from "../Components/ColorSelector";
+import { useNavigate } from "react-router-dom";
 
+function handleGame() {
+  navigate("/game");
+}
 //Get Code from user and verify
 //Get Username from User
 //dropdown for colors
@@ -31,7 +35,7 @@ function Join() {
         <div>
           <ColorSelector />
         </div>
-        <button id="enterGameBtn" type="submit">
+        <button onclickFct={handleGame} id="enterGameBtn" type="submit">
           Enter Game
         </button>
       </div>

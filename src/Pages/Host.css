@@ -3,6 +3,13 @@
     flex-direction: column;
     align-items: center;
 }
+.hostHeading{
+    font-family: 'Anton', sans-serif;
+    font-size:28px; 
+    margin:0;
+    text-align: center;
+    margin-top: 10px;
+}
 
 #codeGenBtn{
     margin-bottom: 5px;
@@ -26,15 +33,46 @@
     justify-content: center;
     align-items: center;
 }
+
 #createGameSettings{
-    height:400px;
-    width: 1000px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 75%;
     border: 2px solid black;
     margin-top: 20px;
+    
+}
+
+#gameParamsContainer{
+    text-align: center;
+    display: inline-block;
+    margin: 25px 0 25px 2%;
+    flex-grow: 1;
+    width: calc(100% * (1/4) - 10px - 1px);
+    margin-bottom: 25px;
+}
+
+#gameCategoriesContainer{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+}
+
+.gameMode{
+    height: 70px;
+    width: 20%;
+    flex: 1 0 21%;
+    margin: 1px;
+    border-radius: 5px;
+    border: none;
+}
+
+#startGameBtn:hover{
+    cursor: pointer;
+    background-color: rgb(8, 169, 48);
 }
 
 #startGameBtn{
@@ -47,7 +85,7 @@
     font-size:24px;
 }
 
-#startGameBtn:hover{
-    cursor: pointer;
-    background-color: rgb(8, 169, 48);
-  }
+
+
+
+
